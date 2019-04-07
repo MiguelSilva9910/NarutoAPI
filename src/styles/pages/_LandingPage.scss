@@ -1,11 +1,10 @@
 .search{
     margin: 2rem 0;
 }
-
 .search__btn{
     font-size: $m-size;
     display: flex;
-    margin: 0 77rem;
+    margin: 0 48%;
 }
 
 .search__name{
@@ -30,4 +29,30 @@
 
 img[src=""] {
     display: none;
- }
+}
+@media (max-width: $desktop-breakpoint) {
+    .search__btn{
+        font-size: $m-size;
+        display: flex;
+        margin: 0 40%;
+    }
+
+    .search__name{
+        font-size: $m-size;
+        font-family: $BalooChettan;
+        text-align: center;
+        margin: 3rem 0 0 0;
+    }
+
+    .search__quotes{
+        font-size: $s-size;
+        margin: 3rem;
+        text-align: center;
+    }
+    
+    .search__image{
+        width: 30rem;
+        height: 45rem;
+        margin: 0 20%;
+    }
+}
