@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import LandingPage from '../pages/LandingPage';
-import AboutPage from '../pages/AboutPage';
+import QuotesList from '../pages/QuotesList';
 import Navbar from '../components/Navbar';
 
 const AppRouters = () => (
@@ -11,7 +11,7 @@ const AppRouters = () => (
           <Navbar />
         <Switch>
             <Route exact path="/" component={LandingPage} />
-            <Route path="/about" component={AboutPage} />
+            <Route path="/quoteslist" component={QuotesList} />
         </Switch>
       </Fragment>
     </BrowserRouter>
