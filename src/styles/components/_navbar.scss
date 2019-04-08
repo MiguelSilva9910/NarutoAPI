@@ -13,10 +13,12 @@
 
 .navbar__ul{
     display:inline;
+    margin: 1rem;
     list-style-type: none;
 }
 
 .ul__li{
     float: left;
+    align-self: center;
     margin: 1rem;
 }

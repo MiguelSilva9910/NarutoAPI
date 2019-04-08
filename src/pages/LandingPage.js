@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 // eslint-disable-next-line
 import React, { Component } from 'react';
-import $ from 'jquery';
+//import $ from 'jquery';
 import { Button } from 'react-bootstrap';
 
-// import {Button} from 'react-bootstrap';
 class LandingPage extends Component{
     constructor() {
         super();
@@ -16,17 +15,30 @@ class LandingPage extends Component{
         this.onHandleClick = this.onHandleClick.bind(this);
       }
 
-      onHandleClick() {
-        const that = this;
-        const xhr = $.get(" https://narutoquoteapi.herokuapp.com/randomquote");
-          xhr.done(function (response) {
-              console.log("success get data", response);
-              that.setState({
-                  author: response.author,
-                  image:  response.image,
-                  quotes: response.quote
-                });
+    //   onHandleClick() {
+    //     const that = this;
+    //     const xhr = $.get("https://narutoquoteapi.herokuapp.com/randomquote");
+    //       xhr.done(function (response) {
+    //           console.log("success get data", response);
+    //           that.setState({
+    //               author: response.author,
+    //               image:  response.image,
+    //               quotes: response.quote
+    //             });
+    //         });
+    // }
+
+    onHandleClick(){
+        fetch("https://narutoquoteapi.herokuapp.com/randomquote")
+        .then(results => {
+            return results.json();
+        }).then(data =>{
+            this.setState({
+                author: data.author,
+                image:  data.image,
+                quotes: data.quote
             });
+        })
     }
 
     render(){

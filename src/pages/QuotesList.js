@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
 import $ from 'jquery';
-//import { Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 class QuotesList extends Component{
   constructor() {
@@ -27,10 +27,9 @@ class QuotesList extends Component{
   render(){
     return(
       <div>
-      {/* <Button variant="primary" onClick={this.onHandleClick} className="search__btn">Quotes</Button> */}
-        {/* <h1>{this.state.author}</h1>
-        <h3>{this.state.quotes}</h3> */}
-        <p align="center"><h1>Em construção</h1></p>
+      <Button variant="primary" onClick={this.onHandleClick} className="search__btn">Quotes</Button>
+        <h1>{this.state.author}</h1>
+        <h3>{this.state.quotes}</h3>
       </div>
     );
   }
