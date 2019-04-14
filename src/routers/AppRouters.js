@@ -8,7 +8,7 @@ import Navbar from '../components/Navbar';
 const AppRouters = () => (
     <BrowserRouter>
       <Fragment>
-          <Navbar />
+        <Navbar />
         <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route path="/quoteslist" component={QuotesList} />
